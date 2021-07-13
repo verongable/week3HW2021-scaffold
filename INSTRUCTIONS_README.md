@@ -8,12 +8,15 @@ When you add the match class to an element, what does it do?
 When you remove a flip element, what does it do?
 Why does querySelectAll give us an array of elements?
 
-
-
-
 1. (X) Connect the given javascript file to your HTML 
+<!-- This allows the script to run on the page. -->
+
 2. (X) Connect the given styles file to your HTML
+<!-- This applies all the styling from the external stylesheet to the page. -->
+
 3. (X) Use the styles file to center the container class element in the middle of the screen using flexbox use a flex direction of column
+<!-- Turns container into a flexbox parent. Flex-direction: column; makes elements appear in column formation. -->
+
 4.  In your HTML file, inside of the section element that has a class of "win-game-modal", Create a div in your HTML that has a class of modal and id of modal
 	1. add a child div to that modal and give it class of modal-content
 	2. The next 6 steps all happen in the div.modal-content element
@@ -22,21 +25,45 @@ Why does querySelectAll give us an array of elements?
 		3.  inform the user that they won and found all 8 pairs of cards
 		4. Show the vault-boy-thumb-up image
 		5. add a button with a class of btn and play-again-btn with text that reads "Play Again?"
+
 		6. (X) Style the modal content and make it look good  (try display flex, justify content center, flex direction column, align items center)
+    <!-- Display: flex; with flex-direction: column; makes all elements stack ontop of eachother nicely, instead of being side by side. Align-items: center; allows the Fallout boy to appear centered, and makes "play again" button only as large as the text inside. -->
+    
 	3. Once your done styling the modal class implement the following changes
 		1. give your modal class
 			1. (X) position: fixed
+      <!-- Keeps the modal window fixed into place. As user scrolls, window stays put. -->
+
 			2. (X) top: 0
+      <!-- Displays modal window with a top margin of 0, making it appear ontop of the screen, instead of the bottom. -->
+
 			3. (X) left: 0
+      <!-- This did not have an effect on my styling. -->
+
 			4. (X) display: none
+      <!-- Keeps the modal window hidden from view until the user is finished with the game. -->
+
 5. Go to the JS file and look over the code, using the steps below will guide you on fixing the code.
-	1. (X) Go to the startGame function and implement the pseudo code
+	1. (X) Go to the startGame function and implement the pseudo code.
+  <!-- This function adds images from the deck to the td cells. Everytime game starts, images are shuffled. -->
+
 	2. (X) Go to the compareTwo function and implement the pseudo code
+  <!-- This function allows only two cards to be displayed at once. Using the if statement, if two cards are selected and the element at index 0 is equal to the element at index 1, then it's a match. If they aren't equal, then it's no match. -->
+
+
 	3. (X) Go the displayMatching Cards function and complete the unimplemented pseudo code
+  <!-- This function gives cards a class of "match" when selected, then pushes the flipped cards to a match array. -->
+
 	4. (X) Go to the checkIsGameFinished and implement pseudo code
+<!-- 
+  This function checks to see if the match array contains a total of 16 elements. When the array matches a length of 16, the timer stops, stats are added to the modal, and then the modal is finally displayed.  -->
+
 	5. (X) Go to the addStatsToModal function and complete the unimplemented pseudocode
 		1. Also change the innerHTML for the p tags so that they have useful information in it to the user.
+  <!-- This function adds completion time, moves taken, and star rating to the modal window at the end of the game by adding 3 different paragraphs to modal-content. -->
+
 	6. (X) Go to the displayModal function and complete the unimplemented pseudocode
+  <!-- This function displays the modal as a block element. Whenever a user clicks on the top left x, the modal disappears by giving it the display: none; attribute. It also lets the user close out of it by clicking anywhere outside the module.  -->
 
 Stuck??
 - After each major step, click through the game and see if any errors come up. If an error comes up refer to steps above and corresponding pseudo code to ensure to implemented it correctly.
